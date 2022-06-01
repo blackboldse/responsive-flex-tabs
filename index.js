@@ -1,1 +1,1 @@
-//practive Responsive forked from https://codepen.io/artlawry/pen/domFD
+// practive Responsive forked from https://codepen.io/artlawry/pen/domFD
