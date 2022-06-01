@@ -1,9 +1,5 @@
 @import "bourdon";
 
-body {
-  animation: fake 1s infinite;
-}
-
 @keyframes fake {
   from {
     opacity: 1;
@@ -12,6 +8,10 @@ body {
   to {
     opacity: 1;
   }
+}
+
+body {
+  animation: fake 1s infinite;
 }
 
 .work-tabs {
@@ -55,4 +55,82 @@ body {
       background-color: #fff;
     }
   }
+}
+
+#tab-one:checked~.tabs #tab-one-label,
+#tab-two:checked~.tabs #tab-two-lable,
+#tab-three:checked~.tabs #tab-three-label,
+#tab-four:checked~.tabs #tab-four-label {
+  background-color: #fff;
+  cursor: default;
+  border-left-color: #69be28;
+}
+
+#tab-one:checked~.tabs #tab-one-label,
+#tab-two:checked~.tabs #tab-two-lable,
+#tab-three:checked~.tabs #tab-three-label,
+#tab-four:checked~.tabs #tab-four-label {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .flex-tabs {
+    flex-direction: column;
+
+    .tab {
+      background: #fff;
+      border-bottom: 1px solid #ccc;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    #tab-one-label {
+      order: 1;
+    }
+
+    #tab-two-label {
+      order: 3;
+    }
+
+    #tab-three-label {
+      order: 5;
+    }
+
+    #tab-four-lable {
+      order: 7;
+    }
+
+    #tab-one-panel {
+      order: 2;
+    }
+
+    #tab-two-panel {
+      order: 4;
+    }
+
+    #tab-three-panel {
+      order: 6;
+    }
+
+    #tab-four-panel {
+      order: 8;
+    }
+  }
+
+  #tab-one:checked~.tabs #tab-one-label,
+  #tab-two:checked~.tabs #tab-two-label,
+  #tab-three:checked~.tabs #tab-three-label,
+  #tab-four:checked~.tabs #tab-four-label {
+    border-bottom: none;
+  }
+
+  #tab-one:checked~.tabs #tab-one-panel,
+  #tab-two:checked~.tabs #tab-two-panel,
+  #tab-three:checked~.tabs #tab-three-panel,
+  #tab-four:checked~.tabs #tab-four-panel {
+    border-bottom: 1px solid #ccc;
+  }
+
 }
