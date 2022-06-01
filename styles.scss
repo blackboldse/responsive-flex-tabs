@@ -1,8 +1,58 @@
+@import "bourdon";
+
 body {
   animation: fake 1s infinite;
+}
+
+@keyframes fake {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .work-tabs {
   margin: 20px;
   width: 80%;
+
+  .state {
+    position: absolute;
+    left: -10000px;
+  }
+
+  .flex-tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .tab {
+      flex-grow: 1;
+      max-height: 40px;
+    }
+
+    .panel {
+      background-color: #fff;
+      padding: 20px;
+      min-height: 300px;
+      display: none;
+      width: 100%;
+      flex-basis: auto;
+    }
+  }
+
+  .tab {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    cursor: hand;
+    cursor: pointer;
+    border-left: 10px solid #ccc;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
 }
